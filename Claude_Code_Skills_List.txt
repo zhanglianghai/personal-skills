@@ -1,0 +1,100 @@
+Claude Code 已安装 Skills 列表
+===============================
+生成日期: 2026-05-24
+共计: 29 个 Skills（20 个外部安装 + 7 个内置 + 2 个自定义）
+
+安装方式: 使用 npx skills add <源> -g 命令安装
+更多 Skills 可浏览: https://skills.sh/
+更新已安装 Skills: npx skills update -g
+卸载 Skills: npx skills remove <技能名> -g -y
+
+===============================
+
+一、文档处理
+-------------------------------
+1. pdf          文档工具        PDF 读写/合并/拆分/水印/加密
+2. docx         文档工具        Word 文档创建/编辑/读取
+3. xlsx         文档工具        Excel 表格读写/图表/格式化
+4. pptx         文档工具        PPT 演示文稿创建
+
+二、网页与浏览器
+-------------------------------
+5. agent-browser  浏览器工具    网页自动化/填表/截图/数据抓取
+6. firecrawl      浏览器工具    网页搜索/抓取/内容提取
+7. web-search    ◇ 内置         联网搜索
+
+三、前端设计
+-------------------------------
+8. frontend-design  设计工具    高质量前端界面设计
+
+四、金融与股票
+-------------------------------
+9. china-stock-analysis  股票    A股价值投资分析/筛选/估值
+10. glmv-stock-analyst   股票    综合股票分析(基本面+技术+资金流)
+
+五、写作与内容
+-------------------------------
+11. novel-writer-cn      写作    中文小说创作/角色/世界观
+12. obsidian-markdown    写作    Obsidian 风格 Markdown 编辑
+
+六、Claude Code 工具
+-------------------------------
+13. find-skills            工具    发现和安装更多 skills
+14. skill-creator          工具    创建/修改/测试 skill
+15. skill-vetter           工具    第三方 skill 安全审查
+16. planning-with-files-zh 工具    中文任务规划系统
+17. vercel-react-best-practices 工具  React/Next.js 最佳实践
+18. update-config         ◇ 内置   settings.json/钩子/权限配置
+19. keybindings-help      ◇ 内置   自定义快捷键
+20. simplify              ◇ 内置   代码质量审查优化
+21. fewer-permission-prompts ◇ 内置 权限白名单减少弹窗
+22. init                  ◇ 内置   初始化 CLAUDE.md
+23. loop                  ◇ 内置   定时循环任务
+
+七、代码审查与安全
+-------------------------------
+24. review               ◇ 内置   Pull Request 审查
+25. security-review      ◇ 内置   安全漏洞审查
+26. karpathy-guidelines   指南     LLM 编码行为最佳实践
+
+八、数据库
+-------------------------------
+27. supabase-postgres-best-practices  数据库  Postgres 性能优化指南
+
+九、自定义 Skills（本地自建）
+-------------------------------
+28. daily-briefing         资讯简报  每日4次个性化推送，覆盖国家大事/财经/生活/健康/职场/AI/娱乐/科技/天气
+29. travel-planner         旅游规划  根据出发地/目的地/天数生成深度行程单，含天气/路线/美食/住宿/交通推荐
+
+===============================
+
+一键安装所有外部 Skills（共 20 个，复制粘贴到终端执行）:
+
+npx skills add anthropics/skills@pdf -g -y && \
+npx skills add anthropics/skills@docx -g -y && \
+npx skills add anthropics/skills@xlsx -g -y && \
+npx skills add anthropics/skills@pptx -g -y && \
+npx skills add vercel-labs/agent-browser -g -y && \
+npx skills add firecrawl/cli -g -y && \
+npx skills add anthropics/skills@frontend-design -g -y && \
+npx skills add sugarforever/01coder-agent-skills@china-stock-analysis -g -y && \
+npx skills add modelscope.cn@glmv-stock-analyst -g -y && \
+npx skills add yangsonhung/awesome-agent-skills@novel-writer-cn -g -y && \
+npx skills add kepano/obsidian-skills@obsidian-markdown -g -y && \
+npx skills add vercel-labs/skills@find-skills -g -y && \
+npx skills add anthropics/skills@skill-creator -g -y && \
+npx skills add useai-pro/openclaw-skills-security@skill-vetter -g -y && \
+npx skills add othmanadi/planning-with-files@planning-with-files-zh -g -y && \
+npx skills add vercel-labs/skills@find-skills -g -y && \
+npx skills add vercel-labs/agent-skills@react-best-practices -g -y && \
+npx skills add supabase/agent-skills@supabase-postgres-best-practices -g -y
+
+===============================
+
+备注:
+- -g 参数表示全局安装 (用户级别)
+- -y 参数跳过确认提示
+- agent-browser 安装后还需执行: npm i -g agent-browser && agent-browser install
+- firecrawl 安装后需配置 FIRECRAWL_API_KEY
+- 标为"◇ 内置"的技能是 Claude Code 自带功能，无需安装
+- 自定义 skills 为本地文件，存放于 ~/.claude/skills/ 或 ~/.agents/skills/ 目录
